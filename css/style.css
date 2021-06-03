@@ -1,80 +1,110 @@
-*{
+* {
     margin: 0;
     padding: 0;
     outline: none;
 }
-html{
+
+html {
     height: 100%;
 }
-body{
+
+body {
     width: 100%;
     height: 100%;
     color: #333;
     background: #f7f7f7;
     font-size: 1em;
-    font-family: "Segoe UI", sans-serif ;
+    font-family: "Segoe UI", sans-serif;
     line-height: 135%;
 }
-a{
-   color: silver;
+
+a {
+    color: silver;
     text-decoration: none;
-    -moz-transition: all.6s ease;
-    -webkit-transition: all.6s ease;
-    -ms-transition: all.6s ease;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -ms-transition: all .6s ease;
 }
-a:hover{
+
+a:hover {
     color: #000a9c;
-     text-decoration: none;
-     -moz-transition: all.6s ease;
-     -webkit-transition: all.6s ease;
-     -ms-transition: all.6s ease;
- }
- a:active{ color:#8ce4a6}
- img{
-     max-width: 100%;
-     height: auto;
-     width: auto\9;
- }
- hr{
-     display: block;
-     border: 0;
-     height: 1px;
-     border-top: 1px solid #ccc;
-     padding: 0;
+    text-decoration: none;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+}
 
- }
- .left{float: left;}
- .right{float: right;}
- .clear{clear: both;}
- /* selection Block */
- ::selection {background: #ec5c5c;color: #fff;}
- ::-moz-selection {background: #ec5c5c;color: #fff;}
+a:active {
+    color: #8ce4a6
+}
 
-header, footer{
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto \9;
+}
+
+hr {
+    display: block;
+    border: 0;
+    height: 1px;
+    border-top: 1px solid #ccc;
+    padding: 0;
+
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* selection Block */
+::selection {
+    background: #ec5c5c;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #ec5c5c;
+    color: #fff;
+}
+
+header, footer {
     width: 98%;
     background-color: #fff;
     float: left;
-   
+
 }
-header{
-    border-bottom: 2px solid silver ;
+
+header {
+    border-bottom: 2px solid silver;
     padding: 1%;
 }
-#logo{
-   font-size: 2em;
-   font-family: Comic Sans MS, sans-serif; 
-   color: silver;
+
+#logo {
+    font-size: 2em;
+    font-family: Comic Sans MS, sans-serif;
+    color: silver;
 }
-.contact{
+
+.contact {
     font-size: 1.5em;
     font-family: Comic Sans MS, sans-serif;
     margin-left: 10px;
 }
-input[type=text].field{
-border-radius: 5px;
-border: 2px solid silver;
-padding: 5px;
-margin-left: 20px;
+
+input[type=text].field {
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 5px;
+    margin-left: 20px;
 }
 input[type=text].field:focus{border: 2px solid #000a9c}
     #menu{
@@ -98,71 +128,113 @@ input[type=text].field:focus{border: 2px solid #000a9c}
     }
     /* Основні стилі для сайту */
 #wrapper{
-    float: left;
-    width: 100%; 
+    width: 100%;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#wrapper #articles{
-    float: left;
+
+#wrapper.wrapper-articles {
     width: 80%;
-    margin-left: 10%;
+    float: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#wrapper #articles article{
+
+#wrapper .articles {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#wrapper .articles article {
     float: left;
     border: 1px solid silver;
     box-sizing: border-box;
     border-radius: 5px;
     background-color: #fafafa;
     min-height: 400px;
-}
-@media(min-width: 700px){
-#wrapper #articles article{
-    width: 31.3333%;
-    margin-right: 2%;        
-}}
-@media(max-width: 899px) and (min-width: 700px) {
-    #wrapper #articles article{
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 10px;        
-    }}
-@media(max-width: 699px){
-    #wrapper #articles article{
-    width: 100%;
+    margin-top: 10px;
     margin-bottom: 10px;
-    }}
-#wrapper #articles article img{
+}
+
+@media (min-width: 700px) {
+    #wrapper .articles article {
+        width: 31.3333%;
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 899px) and (min-width: 700px) {
+    #wrapper .articles article {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 699px) {
+    #wrapper .articles article {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+#wrapper .articles article img {
     width: 100%;
     height: 200px;
     border-radius: 5px 5px 0px 0px;
     border-bottom: 1px solid silver;
     margin-bottom: 10px;
+    object-fit: cover;
 }
-#wrapper #articles article h2{
-    width: 90%;
-    margin-left: 5%;
+
+#wrapper .articles article .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px 25px;
+}
+
+#wrapper .articles article .description h2 {
+    width: 100%;
     font-weight: normal;
     font-size: 1.7em;
     color: #4a4a4a;
+    text-align: left;
 }
-#wrapper #articles article p{
-    width: 80%;
-    margin-left: 10%;
+
+#wrapper .articles article .description p {
+    width: 100%;
     text-indent: 1em;
+    margin-top: 16px;
+    text-align: left;
 }
-#wrapper #articles article a{
-    padding: 1px 5px;
-    background-color:#000a9c;
-    margin-left: 5%;
+
+#wrapper .articles article .description a {
+    padding: 4px 8px;
+    background-color: #000a9c;
     border-radius: 5px;
     color: #fff;
     float: left;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#wrapper #articles article a:hover{
+
+#wrapper .articles article a:hover {
     background-color: rgb(26, 182, 26);
 }
+
+#wrapper .banner {
+    width: 100%;
+}
+
 /* Стилі для сторінки " ПРо нас"*/
 #about_us {
     width: 60%;
@@ -173,7 +245,8 @@ input[type=text].field:focus{border: 2px solid #000a9c}
     box-sizing: border-box;
     padding: 1%;
 }
-#columRight{
+
+#columRight {
     width: 30%;
     float: left;
     margin-left: 5%;
@@ -183,39 +256,47 @@ input[type=text].field:focus{border: 2px solid #000a9c}
     box-sizing: border-box;
     padding: 1%;
 }
+
 /* Стилі для форми */
-form{
+form {
     width: 60%;
     margin-left: 20%;
     float: left;
- }
- form label{
-     float: left;
-     width: 100%;
-     margin-bottom: 10px;
- }
- form input{
-     border-radius: 5px;
-     border: 2px solid silver;
-     padding: 5px;
-     float: left;
-     clear: both;
-     width: 40%;
-     background-color: #fafafa; 
-     margin-bottom: 10px;
-     }
-form input:focus{border: 2px solid #000a9c}
-form textarea{
-   width: 60%;
-   float: left;
-   clear: both;
-   background-color: #fafafa; 
-   border: 2px solid silver;
-   border-radius: 5px;
-   padding: 10px;
-   font-size: 1.7em;
 }
-form #send{
+
+form label {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 5px;
+    float: left;
+    clear: both;
+    width: 40%;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+}
+
+form input:focus {
+    border: 2px solid #000a9c
+}
+
+form textarea {
+    width: 60%;
+    float: left;
+    clear: both;
+    background-color: #fafafa;
+    border: 2px solid silver;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.7em;
+}
+
+form #send {
     float: left;
     padding: 10px;
     background-color: rgb(219, 41, 41);
@@ -225,11 +306,13 @@ form #send{
     font-size: 2em;
     color: #fff;
 }
-form #send:hover{
+
+form #send:hover {
     background-color: rgb(34, 228, 27);
 }
+
 /* Центральний блок нашого скайту */
-#main_soc_block{
+#main_soc_block {
     width: 100%;
     padding: 2% 0;
     border-bottom: 2px solid silver;
@@ -238,50 +321,63 @@ form #send:hover{
     float: left;
     background: url(../img/background.jpg) repeat-x center 0;
     height: 200px;
+    background-size: cover;
 }
-#main_soc_block_in{
-    text-align: center;
-    padding: 1%;
-    color: black;
+
+#main_soc_block_in {
     height: 200px;
+    width: 500px;
+    max-width: 98%;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    color: black;
     background-color: #fafafa;
     border: 1px solid silver;
     box-sizing: border-box;
     border-radius: 7px;
-    width: 500px;
-    max-width: 98%;
 }
+
+#main_soc_block_in h3 {
+    margin-bottom: 10px;
+}
+
 #main_soc_block_in a {
     float: left;
     padding: 5px 10px;
     background-color: rgb(235, 142, 54);
     border-radius: 6px;
     color: #fafafa;
-    margin-left: 35%;
-margin-top: 15px;
+    margin-top: auto;
 }
 
 
-
- /* Стилі для футера */
-footer{
+/* Стилі для футера */
+footer {
     padding: 1%;
-    border-top: 2px solid silver ;
+    border-top: 2px solid silver;
     margin-top: 20px;
-    padding-bottom: 2%;   
+    padding-bottom: 2%;
 }
-footer img{
+
+footer img {
     float: left;
     margin-right: 5px;
 }
-#page-wrap:after{
+
+#page-wrap:after {
     content: "";
     display: block;
 }
-footer, #page-wrap:after{
+
+footer, #page-wrap:after {
     height: 10px;
 }
-#page-wrap{
+
+#page-wrap {
     min-height: 90%;
     margin-bottom: -10px;
 }
