@@ -157,6 +157,7 @@ input[type=text].field:focus{border: 2px solid #000a9c}
     box-sizing: border-box;
     border-radius: 5px;
     background-color: #fafafa;
+    min-width: 200px;
     min-height: 400px;
     margin-top: 10px;
     margin-bottom: 10px;
